@@ -1,0 +1,459 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,100,100italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic-ext);
+
+* {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font: 400 14px 'Roboto', sans-serif;
+  line-height: 1.3;
+  color: black;
+  display: block;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #fff;
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clear {
+  clear:both;
+}
+
+:focus {
+  outline: 0;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a,
+a:hover, 
+a:active, 
+a:focus {
+  outline: none;
+}
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+caption, th, td {
+  font-weight: normal;
+  text-align: left;
+}
+
+textarea {
+  overflow: auto;
+}
+
+input::focus:invalid,
+input:required:valid,
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  outline: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+button:active,
+button:focus {
+  outline: 0;
+}
+
+header,
+section,
+footer {
+  display: block;
+}
+
+.main {
+  margin-top: 50px;
+}
+
+/* Header */
+.navbar-inverse {
+  background-color: #2b323a;
+  border-color: #080808;
+}
+
+.navbar {
+  border-radius: 4px;
+}
+
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+
+.navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 12px 15px;
+  font-size: 26px;
+  line-height: 26px;
+}
+
+ul.navbar-right:hover {
+  background-color: black !important;
+}
+
+.navbar-fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+}
+
+/* Schedule Search Form */
+#schedule-search {
+  padding: 50px 0 40px; 
+  text-align: center;
+}
+
+#schedule-search form.css-form {
+  margin: 60px 15px 0; 
+  text-align: left;
+}
+
+form .btn {
+  margin-top: 20px;
+  padding: 6px 20px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+form .btn:active,
+form .btn:focus {
+  outline: none !important;
+}
+
+form .btn:hover,
+form .btn:focus,
+form .btn:active {
+  background-color: #2b323a !important;
+  color: #fff !important;
+  border-color: #2b323a !important;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.map-route {
+  text-align: center; 
+  margin: 0 auto; 
+  max-width: 550px;
+}
+
+.map-route h3 {
+  color: #de6573;
+  margin-bottom: 15px;
+}
+
+.map-route img {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Schedule search Result */
+#schedule-search-result {
+  padding: 0 25px; 
+}
+
+.station-info {
+  margin-bottom: 40px;
+}
+
+.station-info a {
+  text-decoration: underline;
+}
+
+.station-info p {
+  margin-bottom: 0;
+  font-size: 25px;
+  font-weight: 500;
+  color: #de6573;
+}
+
+.station-info p span {
+  font-size: 26px;
+}
+
+.station-info h3 {
+  font-size: 25px;
+}
+
+.dates {
+  display: block;
+}
+
+/*--- PDF Schedules ---*/
+#pdf-schedules {
+  padding: 50px 15px; 
+  text-align:center;
+}
+
+.print-pdf {
+  text-align: left; 
+  margin-top: 50px; 
+  margin-left: 20px;
+}
+
+.print-pdf > div {
+  margin-top: 40px;
+}
+
+/*--- Holiday Service ---*/
+#holiday-service {
+  padding: 50px 15px; 
+  text-align:center;
+}
+
+#holiday-service > div {
+  text-align: left; 
+  margin-top: 50px; 
+  margin-left: 20px;
+}
+
+#holiday-service ul {
+  margin: 20px;
+}
+
+/*--- Footer ---*/
+footer p {
+  text-align: center; 
+  margin: 80px auto 20px;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+  /* Schedule search Result */
+  .station-info {
+    margin-bottom: 40px;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    margin-top: 30px;
+  }
+
+  /* Schedule Search Form */
+  #schedule-search {
+    padding: 50px 0 25px;
+  }
+
+  #schedule-search form.css-form {
+    margin: 50px 15px 0;
+  }
+
+  /* Schedule search Result */
+  #schedule-search-result {
+    padding: 0 15px; 
+  }
+
+  .station-info {
+    margin-bottom: 30px;
+  }
+
+  .station-info p {
+    font-size: 25px;
+  }
+
+  .station-info p span {
+    font-size: 26px;
+  }
+
+  .station-info h3 {
+    font-size: 25px;
+  }
+
+  .print-pdf {
+    margin-top: 50px; 
+    margin-left: 15px;
+  }
+
+  .print-pdf>div {
+    margin-top: 35px;
+  }
+
+  #holiday-service > div { 
+    margin-top: 40px; 
+    margin-left: 15px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  /* Schedule search Result */
+  #schedule-search-result {
+    padding: 0 5px; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main {
+    margin-top: 30px;
+  }
+
+  /* Schedule Search Form */
+  #schedule-search {
+    padding: 40px 0 20px;
+  }
+
+  #schedule-search h1 {
+    font-size: 32px;
+  }
+
+  #schedule-search form.css-form {
+    margin: 30px 5px 0;
+  }
+
+  /* Schedule search Result */
+  #schedule-search-result {
+    padding: 0; 
+  }
+
+  .dates, 
+  .dt,
+  .at {
+    display: none;
+  }
+
+  .station-info p {
+    font-size: 24px;
+  }
+
+  .station-info p span {
+    font-size: 25px;
+  }
+
+  .station-info h3 {
+    font-size: 24px;
+  }
+
+  #pdf-schedules {
+    padding: 40px 15px;
+  }
+
+  #pdf-schedules h2 {
+    font-size: 28px;
+  }
+
+  .print-pdf {
+    margin-top: 40px; 
+    margin-left: 5px;
+  }
+
+  .print-pdf>div {
+    margin-top: 30px;
+  }
+
+  #holiday-service {
+    padding: 40px 15px; 
+  }
+
+  #holiday-service > div {
+    margin-top: 30px; 
+    margin-left: 5px;
+  }
+
+  #holiday-service ul {
+    margin: 15px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+
+   #schedule-search {
+    padding: 30px 0 15px;
+  }
+
+  .station-info {
+    margin-bottom: 25px;
+  }
+
+  
+  #schedule-search h1 {
+    font-size: 30px;
+  }
+
+  .map-route h3 {
+    margin-bottom: 15px;
+    font-size: 23px;
+  }
+
+  .station-info p {
+    font-size: 23px;
+  }
+
+  .station-info p span {
+    font-size: 24px;
+  }
+
+  .station-info h3 {
+    font-size: 23px;
+  }
+
+  .print-pdf > div {
+    margin-top: 20px;
+  }
+
+   #pdf-schedules h2 {
+    font-size: 27px;
+  }
+
+  #holiday-service h2 {
+    font-size: 28px;
+  }
+
+}
+

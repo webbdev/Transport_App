@@ -1,0 +1,103 @@
+<div class="text-center" class="container" id="page-wrap">
+    
+    <section id="schedule-search">
+      <div class="container">
+        <h1>Caltrain Schedules</h1>
+       
+        <form role="form" class="css-form">
+          <div class="row">
+            <div class="col-sm-4 form-group">
+              <label for="departure">Departure</label>
+              <select name="departureStation" class="form-control" ng-model="departureStation" ng-options="x.stop_name for x in stops | orderBy:'stop_name'" ng-change="getStopsForDepartureStation()" required>
+                <option value="">-- Please choose a station --</option>
+                </select>
+            </div>
+            <div class="col-sm-4 form-group">
+              <label for="arrival">Arrival</label>
+              <select name="arrivalStation" class="form-control" ng-model="arrivalStation" ng-options="x.stop_name for x in stops | orderBy:'stop_name'" ng-change="getStopsForArrivalStation()" required>
+                <option value="">-- Please choose a station --</option>
+                </select>
+            </div>
+            <div class="col-sm-4 form-group">
+              <label for="dates">Date</label>
+              <select class="form-control" name="dates" id="dates"
+                      ng-model="selectedDate" required>
+                <option value="">-- Select Date --</option>
+                <option value="Weekday">Weekday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 form-group" style="text-align:center;">
+              <button type="submit" ng-click="getSchedules()" class="btn btn-default">View Schedule</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section ng-hide="arrivalStationSelected && departureStationSelected && selectedDate">
+      <div class="container">
+        <div class="map-route" ng-controller="mainController">
+          <h3>System Map</h3>
+          <img ng-src="{{routeMap}}" width="100%" alt="Route Map">
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule-search-result">
+      <div class="container text-left">
+        <div ng-show="arrivalStationSelected && departureStationSelected && selectedDate">
+           
+          <div class="station-info">
+            <p><span>{{}} Southbound</span> - {{ selectedDate }} Service</p>      
+            <table>
+              <thead>
+                <tr>
+                  <th><h3>{{ departureStation.stop_name }}</h3></th>
+                  <th><h3>&nbsp;&nbsp;to&nbsp;&nbsp;</h3></th>
+                  <th><h3>{{ arrivalStation.stop_name }}</h3></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="{{ departureStation.stop_url }}" target="_blank">Get Station Info</a></td>
+                  <td></td>
+                  <td><a href="{{ arrivalStation.stop_url }}" target="_blank">Get Station Info</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-responsive">          
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Train No.</th>
+                  <th class="dates">Date</th>
+                  <th>Departure <span class="dt">Time</span></th>
+                  <th>Duration</th>
+                  <th>Arrival <span class="at">Time</span></th>
+                  <th>Route</th>
+                </tr> 
+              </thead>
+              <tbody>
+                <tr ng-repeat="trip in trips | filter: { timePeriod: selectedDate }">
+                    <td>{{trip.tripId}}</td>
+                    <td class="dates">{{trip.timePeriod}}</td> 
+                    <td>{{trip.departureTime}}</td>
+                    <td>{{trip.totalTripTime}}</td>
+                    <td>{{trip.arrivalTime}}</td>
+                    <td><a href="/images/map.png" target="_blank">map</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+</div>
