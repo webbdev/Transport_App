@@ -10,8 +10,9 @@ If a network connection exists, the application will query an endpoint that prov
 1.  git clone the repository: https://github.com/webbdev/Transport_App.git
 2.  cd Transport_App 
 3.  npm install
-4.  gulp dist
-5.  navigate to http://localhost:9000
+4.  bower install
+5.  gulp dist
+6.  navigate to http://localhost:9000
 
 ### Technologies
 
